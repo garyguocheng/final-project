@@ -10,9 +10,21 @@ Follow the steps below to download all datasets needed to replicate the results.
 
 **Step 2** Open the two datasets and click on the blue "Access Dataset" option on the right of the screen. Select "Original Format ZIP". Then you will be required to sign in a guest book and agree to the Add Health and Dataverse terms of use. Enter your information and hit "Accept". 
 
-**Step 3** Inside the Wave I Dataset, the file we are interested in is "w1context_dvn.sav". Inside the Wave III Dataset, there are three data files that we are intersted in, namely "w3educatn_dvn.sav", "w3pvt_dvn.sav", and "w3graduatn_dvn_3.sav". 
+**Step 3** Inside the Wave I Dataset, the file we are interested in is *w1context_dvn.sav*. Inside the Wave III Dataset, there are three data files that we are intersted in, namely *w3educatn_dvn.sav*, *w3pvt_dvn.sav*, and *w3graduatn_dvn_3.sav*. 
 
 ## Replication Procedure
 
+Running **main.r** will run all the other files.
 
+The other files can run separately, followed by the order:
+1. clean_data.r
+2. run_reg.r
+3. make_figure.r
+
+**clean_data.r** takes inputs from the data folder and produces *data.csv* in the ./output/interm_data folder.
+
+**run_reg.r** takes *data.csv* as input and produces the remaining 6 csv files in ./output/interm_data folder and the 6 models in ./output/model folder.
+
+**make_figure.r** produces all of the 7 figures stored in ./output/figure folder.
+ 
 
